@@ -18,10 +18,14 @@
   --warn: #f5a524; --bad: #e5484d;
 }
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #0f1512; --card: #18211c; --text: #e8efe9; --muted: #93a39a; --line: #26332b;
     --primary: #2fbf71; --primary-soft: #1a3427;
   }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1512; --card: #18211c; --text: #e8efe9; --muted: #93a39a; --line: #26332b;
+  --primary: #2fbf71; --primary-soft: #1a3427;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
